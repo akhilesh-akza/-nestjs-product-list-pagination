@@ -1,0 +1,18 @@
+
+
+Assessment Test:
+
+1.Create a category table with 5 rows having fields
+	-categoryId(Primary),categoryName
+
+2.Create a product database with 20 rows having fields
+	-productId(primary),productName,qty,Amount,CatgeoryId(foreign Key)
+3.Create a end point to get all products with pagination,search filter and sort by(qty ,amt)
+
+	-Need to fetch productName,categoryName,qty, Amt and total records returned
+	-Both search and pagination params are optional,need to fetch if params are passed.
+	-Need to fetch the data based on sort value.
+
+Note:Share your work via github,and submit it personally to me.
+
+Please submit it on or before June 15th

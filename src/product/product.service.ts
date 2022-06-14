@@ -35,6 +35,12 @@ export class ProductService {
         },
       ],
     });
+    if (count === 0) {
+      return {
+        result: list,
+        message: 'No results found',
+      };
+    }
 
     if (offset >= count) {
       throw new BadRequestException(

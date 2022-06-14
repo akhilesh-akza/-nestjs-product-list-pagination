@@ -16,11 +16,11 @@ export class ProductService {
     search = search ? search : '';
     let orderOption = {};
     if (sort === sortOptions.quantity) {
-      orderOption = { quantity: 'ASC' };
+      orderOption = { quantity: options.ordering };
     } else if (sort === sortOptions.amount) {
-      orderOption = { amount: 'ASC' };
+      orderOption = { amount: options.ordering };
     } else {
-      orderOption = { product_id: 'ASC' };
+      orderOption = { product_id: options.ordering };
     }
 
     const repo = this.productRepo;
@@ -44,9 +44,9 @@ export class ProductService {
     return {
       result: list,
       showing: {
-        from: `${isNaN(offset) ? 1 : offset + 1}`,
-        to: `${offset + limit < count ? offset + limit : count}`,
-        outof: `${count}`,
+        from: isNaN(offset) ? 1 : offset + 1,
+        to: offset + limit < count ? offset + limit : count,
+        outof: count,
       },
     };
   }

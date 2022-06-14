@@ -12,10 +12,6 @@ export class CategoryService {
 
   async findAll() {
     const [list, count] = await this.categoryRepo.findAndCount();
-    return list;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} category`;
+    return [list, count];
   }
 }

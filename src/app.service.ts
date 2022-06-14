@@ -5,11 +5,15 @@ import { ProductService } from './product/product.service';
 @Injectable()
 export class AppService {
   constructor(
-    private readonly categoryService: CategoryService,
     private readonly productService: ProductService,
+    private readonly categoryService: CategoryService,
   ) {}
 
-  async getCategoryList(paginationOptions, search?: string) {
+  async getProductList(paginationOptions, search?: string) {
     return await this.productService.findAllProducts(paginationOptions, search);
+  }
+
+  getCategoryList() {
+    return this.categoryService.findAll();
   }
 }

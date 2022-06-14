@@ -1,5 +1,12 @@
 import { Transform, Type } from 'class-transformer';
-import { IsEnum, IsNumber, IsOptional, IsString, Min } from 'class-validator';
+import {
+  IsEnum,
+  IsInt,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Min,
+} from 'class-validator';
 
 export enum sortOptions {
   quantity = 'qty',
@@ -14,12 +21,13 @@ export enum sortBy {
 export default class PaginationParams {
   @IsOptional()
   @Type(() => Number)
-  @IsNumber()
+  @IsInt()
   @Min(0)
   offset?: number;
 
   @IsOptional()
   @Type(() => Number)
+  @IsInt()
   @Min(1)
   limit?: number;
 

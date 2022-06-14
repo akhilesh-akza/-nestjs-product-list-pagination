@@ -1,4 +1,4 @@
-<p align="center">   // Example : http://localhost:3000/products?limit=5&offset=5&sort=qty&ordering=desc </p>
+<p align="center">    Example URL : <a href="http://localhost:3000/products?limit=5&offset=5&sort=qty&ordering=desc">http://localhost:3000/products?limit=5&offset=5&sort=qty&ordering=desc</a> </p>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
